@@ -1,0 +1,10 @@
+[DEFAULT]
+user=ocid1.user.oc1..fhlakhdflkjdshf ladjhffhlkdfhkljldhdsfjhfkfdh
+fingerprint=xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:bf:bd:35:0d:8a
+tenancy=ocid1.tenancy.oc1..aalfjlkasjflsafjslfjçsdlfjçsldfjçsldfjslskabzonmiaq
+region=sa-saopaulo-1
+key_file=keyCliente.pem
+credito=58000.00
+inicio_contrato=2023-01-01T00:00:00Z
+fim_contrato=2024-01-31T00:00:00Z
+cliente=Nome_cliente_exemplo
