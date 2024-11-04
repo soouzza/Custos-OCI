@@ -1,4 +1,4 @@
-![imagem1](./images/logo-statum-blue-1.png)
+![logo](./images/logo-statum-blue-1.png)
 
 **Introdução**
 
@@ -7,14 +7,14 @@ Código está em seu estado inicial, necessário refatoração, revisão e melho
 
 
 **Configuração inicial**
-- 1.	Criar o usuário para consulta e permissões necessárias
-- 2.	Obter os dados de conexão fornecidos na criação do usuário
-- 3.	Em uma pasta inserir o script main.py
-- 4.	Para cada cliente a ser monitorado, inserir na pasta 2 arquivos:
-	- a.	um arquivo .PEM (chave de acesso à conta, obtido no ambiente)
-	- b.	um arquivo de configuração com os dados fornecidos pelo portal OCI ao criar usuário, além de dados adicionais de estatística do cliente
+- 1. Criar o usuário para consulta e permissões necessárias
+- 2. Obter os dados de conexão fornecidos na criação do usuário
+- 3. Em uma pasta inserir o script main.py
+- 4. Para cada cliente a ser monitorado, inserir na pasta 2 arquivos:
+	- a. um arquivo .PEM (chave de acesso à conta, obtido no ambiente)
+	- b. um arquivo de configuração com os dados fornecidos pelo portal OCI ao criar usuário, além de dados adicionais de estatística do cliente
 	- Obs: instrução sobre o PEM e arquivo de configuração logo abaixo.
-- 5.	A única biblioteca não comum utilizada foi a OCI, não esquecer de instalar o pacote antes de executar o script: “pip install OCI”
+- 5. A única biblioteca não comum utilizada foi a OCI, não esquecer de instalar o pacote antes de executar o script: “pip install OCI”
 
 
 **Criação do usuário para utilização da API:**
@@ -26,7 +26,7 @@ Criar uma nova política, informar o nome da política e em ‘resources’ esta
 *allow group manutencao to read usage-reports in tenancy*
 Observação: permissão pode ser alterada conforme necessidade, no exemplo foi dada permissão “usage-reports” para o grupo “manutencao” em todo tenancy.
 
-![imagem1](./images/imagem1.png)
+![imagem1](./images/Imagem1.png)
 
 - 2. em Identity > Domains > Default domain > Groups
 Criar um novo Grupo, no item 1, foi dada permissão para o grupo “manutenção”, portanto, criamos nesse passo um grupo com esse mesmo nome.
@@ -37,8 +37,8 @@ Criar um novo Grupo, no item 1, foi dada permissão para o grupo “manutenção
 	- Em Api keys: criar uma nova api key
 		- baixar o arquivo private key e copiar os dados de conexão que são exibidos
 
-![imagem1](./images/imagem2.png)
-![imagem1](./images/imagem3.png)
+![imagem2](./images/Imagem2.png)
+![imagem3](./images/Imagem3.png)
 
 
 **Exemplo de estrutura da pasta:**
@@ -47,15 +47,15 @@ Neste exemplo, temos 3 clientes sendo consultados, para cada cliente temos 1 arq
 No exemplo, utilizamos o formato ClienteA.pem e config_ClienteA. Mas pode ser utilizado qualquer nome desejado, a única regra é manter o formato “config_” no início do nome da configuração. Dentro do arquivo de configuração, há referência ao arquivo chave .PEM.
 O script irá percorrer a pasta e fazer localizar todos os arquivos que inicial com “config_”, fazendo a extração de dados no portal OCI considerando cada arquivo como um cliente distinto.
 
-![imagem1](./images/imagem4.png)
-![imagem1](./images/imagem5.png)
+![imagem4](./images/Imagem4.png)
+![imagem5](./images/Imagem5.png)
 
 
 **Estrutura do arquivo de configuração:**
 
 Copie para o arquivo de configuração os dados obtidos ao criar a chave API do usuário:
 
-![imagem1](./images/imagem6.png)	
+![imagem6](./images/Imagem6.png)	
 
 Os dados da chave são user, fingerprint, tenancy, region e key_file.
 O campo key_file deve ser preenchido com o nome do arquivo .pem que foi baixado junto com os dados da chave.
@@ -76,11 +76,11 @@ Ao executar o script, serão exibidos um relatório para cada cliente mostrando:
 - forecast, considerando o consumo segundo o dia da semana, exibindo o valor calcula de consumo por dia da semana, quantidade de dias restantes até o final do contrato e valor previsto
 - estatísticas diversas mostrando o consumo, forecast e sobra ou débito estimados
 
-![imagem1](./images/imagem7.png)
+![imagem7](./images/Imagem7.png)
  
 E, ao final, será exibido um relatório acumulando os dados de todos os clientes consultados:
 
-![imagem1](./images/imagem8.png)
+![imagem8](./images/Imagem8.png)
 
 
 **Considerações finais:**
@@ -96,4 +96,4 @@ Além disso, o script não foi testado e validado em todos os cenários possíve
 Os métodos de cálculo de forecast podem ser alterados conforme necessidade. Nesse exemplo, foi utilizado apenas a média de consumo dos dois últimos meses e foi considerado o consumo por dia da semana. Diversos outros cenários podem ser testados.
 Para dúvidas adicionais, acionar a equipe em suporte@statum.com.br.
 
-![imagem1](./images/isotipo.png)
+![isotipo](./images/isotipo.png)
