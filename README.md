@@ -1,4 +1,4 @@
-<img src="./images/logo-statum-blue-1.png" alt="logo" width="300" height="300">
+<div align="center"><img src="./images/logo-statum-blue-1.png" alt="logo" width="300" height="200"></div>
 
 **Introdução**
 
