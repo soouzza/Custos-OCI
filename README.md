@@ -1,4 +1,5 @@
 <div align="center"><img src="./images/logo-statum-blue-1.png" alt="logo" width="300" height="200"></div>
+</br></br>
 
 **Introdução**
 
@@ -98,4 +99,5 @@ Além disso, o script não foi testado e validado em todos os cenários possíve
 Os métodos de cálculo de forecast podem ser alterados conforme necessidade. Nesse exemplo, foi utilizado apenas a média de consumo dos dois últimos meses e foi considerado o consumo por dia da semana. Diversos outros cenários podem ser testados.
 Para dúvidas adicionais, acionar a equipe em suporte@statum.com.br.
 
-![isotipo](./images/isotipo.png)
+</br></br>
+<div align="center"><img src="./images/isotipo.png" alt="logo" width="250" height="200"></div>
