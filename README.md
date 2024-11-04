@@ -1,4 +1,4 @@
-![logo](./images/logo-statum-blue-1.png)
+<img src="./images/logo-statum-blue-1.png" alt="logo" width="300" height="300">
 
 **Introdução**
 
@@ -38,6 +38,7 @@ Criar um novo Grupo, no item 1, foi dada permissão para o grupo “manutenção
 		- baixar o arquivo private key e copiar os dados de conexão que são exibidos
 
 ![imagem2](./images/Imagem2.png)
+
 ![imagem3](./images/Imagem3.png)
 
 
@@ -48,6 +49,7 @@ No exemplo, utilizamos o formato ClienteA.pem e config_ClienteA. Mas pode ser ut
 O script irá percorrer a pasta e fazer localizar todos os arquivos que inicial com “config_”, fazendo a extração de dados no portal OCI considerando cada arquivo como um cliente distinto.
 
 ![imagem4](./images/Imagem4.png)
+
 ![imagem5](./images/Imagem5.png)
 
 
