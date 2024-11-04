@@ -245,7 +245,7 @@ def printCliente(cliente, consumo, consumoMedia, consumoForecast, estatisticas):
     print(consumoMedia)
     print(f"--------------------------------------------------------")
 
-    print("Forecast")
+    print("Forecast:")
     print(consumoForecast)
     print(f"--------------------------------------------------------")
 
@@ -264,6 +264,7 @@ def printCliente(cliente, consumo, consumoMedia, consumoForecast, estatisticas):
 def printClientes(clientesConsumo, clientesForecast, clientesEstatisticas):
     # relatório de todos os clientes
     print(f"--------------------------------------------------------")
+    print(f"Resumo de todos os clientes:")
     print(f"--------------------------------------------------------")
     print("Consumo:")
     print(clientesConsumo)
@@ -288,6 +289,8 @@ if __name__ == "__main__":
 
     for i, cliente in enumerate(clientes):
         config = oci.config.from_file(file_location=cliente)
+        if config["ignore"] == "true":
+            continue
         usage_client = oci.usage_api.UsageapiClient(config)
 
         compartment_id = config["tenancy"]
